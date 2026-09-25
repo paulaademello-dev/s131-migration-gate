@@ -522,6 +522,34 @@ html,body{max-width:100%;overflow-x:hidden}
   .hud{padding:20px 16px 16px!important}
   .formpage{padding:18px 13px!important}
 }
+
+/* V5.3.3 — MOBILE INFINITE HERO FADE */
+@media (max-width:800px){
+  .hero{
+    padding-bottom:64px!important;
+  }
+  .hero:after{
+    background:linear-gradient(
+      to bottom,
+      rgba(6,9,8,0) 0%,
+      rgba(6,9,8,.03) 52%,
+      rgba(6,9,8,.30) 66%,
+      rgba(6,9,8,.72) 82%,
+      #090d0b 100%
+    )!important;
+  }
+  .hero .terminal{
+    margin-top:24px!important;
+    margin-bottom:54px!important;
+    position:relative;
+    z-index:3;
+  }
+  .hero .hud{
+    position:relative;
+    z-index:3;
+    background:linear-gradient(180deg,rgba(13,20,16,.74),rgba(9,13,11,.96))!important;
+  }
+}
 </style>
 
 </head>
