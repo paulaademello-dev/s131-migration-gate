@@ -489,6 +489,41 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 </style>
 
+
+<style id="v532-mobile-final-polish">
+@media (max-width:768px){
+  /* Final mobile rhythm pass */
+  .hero .lead{font-size:16px!important;line-height:1.48!important;margin-top:0!important}
+  .hero h1{margin-bottom:16px!important}
+  .hero .btn{margin-top:20px!important}
+  .hero .terminal{margin-top:16px!important}
+
+  /* Tactical panel: keep its label inside the panel instead of hugging the border */
+  .hud{padding:22px 18px 18px!important}
+  .hud:before{margin:0 0 16px!important;padding:0!important;line-height:1.25!important;letter-spacing:.16em!important}
+
+  /* Slightly tighter section/card rhythm without shrinking the typography */
+  section{padding-top:52px!important;padding-bottom:52px!important}
+  #alliances .cards{margin-top:22px!important}
+  .card{padding:18px!important}
+  .steps{margin-top:24px!important}
+  .step{padding:18px!important}
+
+  /* Give the form more usable canvas */
+  .formpage{padding:18px 14px!important}
+  .field{margin-bottom:18px!important}
+  #apply .section-copy{max-width:34em!important}
+
+  /* Footer breaks intentionally instead of wherever the browser feels like it */
+  .footer{padding:26px 18px!important;line-height:1.55!important;text-align:center!important}
+  .footer .footer-line{display:block!important}
+}
+@media (max-width:430px){
+  .hud{padding:20px 16px 16px!important}
+  .formpage{padding:18px 13px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="wrap nav"><div class="brand">S131 <b>// MIGRATION GATE</b></div>
@@ -611,7 +646,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div>
 </section>
 </main>
-<div class="footer">S131 MIGRATION GATE // OPERATION COORDINATED BY TORA</div>
+<div class="footer"><span class="footer-line">S131 MIGRATION GATE</span><span class="footer-line">// OPERATION COORDINATED BY TORA</span></div>
 
 <script>
 let page=0;
@@ -656,6 +691,7 @@ function setLang(lang){
  document.getElementById('ptBtn').classList.toggle('active',lang==='pt');
  document.getElementById('enBtn').classList.toggle('active',lang==='en');
  document.documentElement.lang=lang==='pt'?'pt-BR':'en-US';
+ const langInput=document.getElementById('f-language'); if(langInput) langInput.placeholder=lang==='pt'?'Português, Inglês, Espanhol...':'Portuguese, English, Spanish...';
  // Translate form labels, buttons and helper text without touching entered values.
  const map=lang==='pt'?{
  "NICKNAME *":"NICKNAME *","PLAYER ID *":"ID DO JOGADOR *","CURRENT SERVER *":"SERVIDOR ATUAL *","LANGUAGE *":"IDIOMA *",
