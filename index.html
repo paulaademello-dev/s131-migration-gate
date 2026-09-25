@@ -113,6 +113,163 @@ section{position:relative}
 #f-march.power-invalid{border-color:#ff9b54!important;box-shadow:0 0 0 1px rgba(255,155,84,.28) inset!important}
 </style>
 
+
+<style id="v53-mobile-css">
+/* V5.3 MOBILE PASS */
+html,body{max-width:100%;overflow-x:hidden}
+@media (max-width: 768px){
+  body{font-size:15px}
+  .shell,.wrap,.container,main,section{max-width:100%}
+  .nav,.topbar,.navbar{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  .nav-inner,.topbar-inner,.navbar-inner{
+    min-height:72px!important;
+    gap:12px!important;
+  }
+  .brand{
+    font-size:clamp(17px,5.2vw,22px)!important;
+    letter-spacing:.08em!important;
+    white-space:nowrap;
+  }
+  nav .links,.nav-links,.desktop-nav{display:none!important}
+
+  .hero{
+    min-height:auto!important;
+    padding:0 18px 28px!important;
+  }
+  .hero-grid,.hero-inner,.hero-layout{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+  }
+  .hero-copy,.hero-content{
+    width:100%!important;
+    max-width:none!important;
+    padding:54px 0 32px!important;
+  }
+  .hero h1{
+    font-size:clamp(48px,14vw,66px)!important;
+    line-height:.88!important;
+    letter-spacing:-.045em!important;
+    max-width:100%!important;
+    overflow-wrap:normal!important;
+  }
+  .hero p{
+    font-size:clamp(18px,5.2vw,23px)!important;
+    line-height:1.55!important;
+    max-width:100%!important;
+  }
+  .hero .eyebrow,.hero-kicker{
+    font-size:13px!important;
+    letter-spacing:.16em!important;
+  }
+  .hero .btn,.hero a.btn,.hero button,.cta-primary{
+    width:100%!important;
+    min-height:58px!important;
+    justify-content:center!important;
+    text-align:center!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  .hero-visual,.hero-hud,.hud-card{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+  }
+  .hero-visual{
+    min-height:300px!important;
+    background-position:center center!important;
+    background-size:cover!important;
+  }
+
+  .section,.content-section{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  .cards,.alliance-grid,.paths-grid,.process-grid,.grid-3{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+  .card,.alliance-card,.path-card,.process-card{
+    min-width:0!important;
+  }
+
+  .form-shell,.form-wrap,.application,.application-shell{
+    width:auto!important;
+    max-width:none!important;
+    margin-left:16px!important;
+    margin-right:16px!important;
+  }
+  .steps,.form-steps{
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .steps::-webkit-scrollbar,.form-steps::-webkit-scrollbar{display:none}
+  .step,.form-step{
+    min-width:132px!important;
+    flex:0 0 132px!important;
+  }
+  .form-panel,.form-body{
+    padding:22px 16px!important;
+  }
+  .form-grid,.fields,.grid-2{
+    grid-template-columns:1fr!important;
+  }
+  input,select,textarea{
+    width:100%!important;
+    max-width:100%!important;
+    min-height:48px;
+    font-size:16px!important; /* prevents iOS zoom */
+    box-sizing:border-box;
+  }
+  textarea{min-height:110px}
+  .option-grid,.destination-grid,.faction-grid{
+    grid-template-columns:1fr!important;
+  }
+  .hours,.hours-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    gap:8px!important;
+  }
+  .hour{
+    min-width:0!important;
+    width:100%!important;
+    min-height:44px!important;
+    padding:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .submit-row,.form-actions{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:10px!important;
+  }
+  .submit-row button,.form-actions button{
+    width:100%!important;
+    min-height:52px!important;
+  }
+}
+
+@media (max-width: 430px){
+  .hero{padding-left:16px!important;padding-right:16px!important}
+  .hero h1{font-size:clamp(46px,13.8vw,59px)!important}
+  .hero p{font-size:18px!important}
+  .section,.content-section{padding-left:16px!important;padding-right:16px!important}
+  .hours,.hours-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+
+@media (max-width: 370px){
+  .hero h1{font-size:45px!important}
+  .brand{font-size:16px!important}
+  .hours,.hours-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+</style>
+
 </head>
 <body>
 <div class="wrap nav"><div class="brand">S131 <b>// MIGRATION GATE</b></div><div class="links"><a href="#server" id="nav-server">SERVER 131</a><a href="#alliances" id="nav-alliances">ALLIANCES</a><a href="#process" id="nav-process">HOW IT WORKS</a><a href="#apply" id="nav-apply">APPLY</a><button class="langbtn" id="ptBtn" onclick="setLang('pt')">🇧🇷 PT-BR</button><button class="langbtn active" id="enBtn" onclick="setLang('en')">🇺🇸 EN-US</button></div></div>
@@ -520,7 +677,7 @@ setLang(localStorage.getItem('s131lang')||'en');
 
 
 
-// V5.2 // DARK WAR MARCH POWER NORMALIZATION
+// V5.3 // DARK WAR MARCH POWER NORMALIZATION
 function parseMarchPower(raw) {
   let s=(raw||'').trim().toUpperCase().replace(/\s+/g,'');
   if(!s) return {ok:false, empty:true};
